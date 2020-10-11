@@ -26,4 +26,18 @@ public class StackQueueTest {
 		stack.printStack();
 		Assert.assertEquals(thirdNode, node);
 	}
+
+	@Test
+	public void stackPopTest() {
+		Stack<Integer> stack = new Stack<Integer>();
+		Node<Integer> firstNode = new Node<>(70);
+		Node<Integer> secondNode = new Node<>(30);
+		Node<Integer> thirdNode = new Node<>(65);
+		stack.push(firstNode);
+		stack.push(secondNode);
+		stack.push(thirdNode);
+		stack.pop();
+		stack.printStack();
+		Assert.assertEquals(2, stack.size());
+	}
 }
