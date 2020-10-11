@@ -19,4 +19,22 @@ public class Stack<K> {
 		return linkedList.getHead();
 	}
 
+	public void pop() {
+		if (!isEmpty())
+			linkedList.pop();
+		else
+			System.out.println("Stack is empty");
+	}
+
+	public boolean isEmpty() {
+		if (linkedList.size() == 0)
+			return true;
+		else
+			return false;
+	}
+
+	public int size() {
+		return linkedList.size();
+	}
+
 }
