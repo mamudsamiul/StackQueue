@@ -11,6 +11,14 @@ public class Queue<K> {
 		linkedList.append(node);
 	}
 
+	public void deQueue() {
+		if (!isEmpty())
+			linkedList.popLast();
+		else
+			System.out.println("Queue is empty");
+
+	}
+
 	public int size() {
 		return linkedList.size();
 	}
