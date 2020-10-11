@@ -5,8 +5,25 @@ package com.capgemini.stackqueuetest;
 
 import org.junit.Test;
 
+import com.capgemini.stackqueue.Node;
+import com.capgemini.stackqueue.Stack;
+
+import junit.framework.Assert;
+
 import static org.junit.Assert.*;
 
 public class StackQueueTest {
-
+	@Test
+	public void stackPeakTest() {
+		Stack<Integer> stack = new Stack<Integer>();
+		Node<Integer> firstNode = new Node<>(70);
+		Node<Integer> secondNode = new Node<>(30);
+		Node<Integer> thirdNode = new Node<>(65);
+		stack.push(firstNode);
+		stack.push(secondNode);
+		stack.push(thirdNode);
+		Node node = stack.peak();
+		stack.printStack();
+		Assert.assertEquals(thirdNode, node);
+	}
 }
